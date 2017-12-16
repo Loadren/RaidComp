@@ -10,8 +10,6 @@ const Discord = require('discord.js');
 const mysql = require('mysql');
 const client = new Discord.Client();
 const settings = require('./settings.json');
-const express = require('express');
-const app = express();
 var isSpecFound = false;
 
 const Chaman = new classeObject("Chaman", "amélioration", "restauration", "élémentaire", null);
@@ -27,10 +25,6 @@ const Paladin = new classeObject("Paladin", "sacré", "vindicte", "protection", 
 const Pretre = new classeObject("Prêtre", "sacré", "discipline", "ombre", null);
 const Voleur = new classeObject("Voleur", "hors-la-loi", "assassinat", "finesse", null);
 const classList = [Chaman,Chasseur,DH,DK,Demoniste,Druide,Guerrier,Mage,Moine,Paladin,Pretre,Voleur];
-
-app.listen(process.env.ALWAYSDATA_HTTPD_PORT, process.env.ALWAYSDATA_HTTPD_IP, function () {
-  console.log('Example app started!');
-});
 
 client.on('ready', () => {
   console.log('I\'m online!');{};
